@@ -6,4 +6,5 @@ else
 end
 
 # write your own tests here
-@test 1 == 2
+read_QuestaalXYZ(open("../128.xyz"))
+
