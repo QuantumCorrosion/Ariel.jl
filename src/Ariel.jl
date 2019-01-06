@@ -23,7 +23,20 @@ function read_QuestaalXYZ(f::IOStream)
     
     PLAT=reshape(map(x->parse(Float64,x), h[3:11] ), 3,3) # lattice parameters
     show(PLAT)
-#    A=readdlm(f)
+
+    readline(f) # don't do anything with the comment line, currently
+
+#    traj=[]
+#    while !eof(f)
+#        append(traj,read_next_frame(f),natoms)
+#    end
+    A=reshape(readdlm(f, skipstart=2), natoms, 19, 2)
+    show(A)
+end
+
+"Gobble natoms worth of frame"
+function read_next_frame(f::IOStream,natoms)
+    println("Oh lordy.")        
 end
 
 end # module

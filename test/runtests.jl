@@ -6,5 +6,5 @@ else
 end
 
 # write your own tests here
-read_QuestaalXYZ(open("../128.xyz"))
+read_QuestaalXYZ(open("../128-2frames.xyz"))
 
